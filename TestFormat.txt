@@ -1,0 +1,4 @@
+# Sheik
+-f FILENAME.MP4
+-m usmash 0:14
+-m fsmash 0:17
