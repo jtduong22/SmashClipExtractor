@@ -1,13 +1,13 @@
-filename='TestFormat.txt'
-
 # class for locating clip location
-class clip:
-    def __init__(self, name: str, time: str, file: str):
+class Clip:
+    def __init__(self, name: str, time: str, file: str, length: int = 3):
         self.name = name
         self.time = time
         self.file = file
+        self.length = length
 
-def ParseFile(filename: str, moves: dict) -> int:
+
+def parsefile(filename: str, moves: dict) -> int:
     # number of clips
     clip_count = 0
 
@@ -16,7 +16,7 @@ def ParseFile(filename: str, moves: dict) -> int:
         file = open(filename, 'r')
 
         for line in file:
-            print(line)
+            print(line.split())
 
     # open failure
     except:
@@ -24,4 +24,5 @@ def ParseFile(filename: str, moves: dict) -> int:
         pass
     return clip_count
 
-ParseFile('TestFormat.txt', {})
+
+
