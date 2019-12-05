@@ -2,6 +2,8 @@ import ParseFile as pf
 import ClipExtractor as ce
 
 filename = 'TestFormat.txt'
-
-pf.parsefile(filename, {})
+moves = {}
+pf.parsefile(filename, moves)
 ce.extractclip()
+
+print(moves)
