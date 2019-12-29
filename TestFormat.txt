@@ -1,4 +1,6 @@
 # Sheik
 -f FILENAME.MP4
--m usmash 0:14
--m fsmash 0:17
+-m usmash -i 0:14 -t 5
+-m usmash -i 0:16
+-m fsmash -i 0:17
+-m dsmash -i
