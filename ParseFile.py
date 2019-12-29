@@ -78,7 +78,9 @@ def parsefile(filename: str, moves: dict) -> int:
                 if line[0] == '#':
                     print()
                     continue
-
+                elif str.isspace(line):
+                    print()
+                    continue
                 args = line.split()
 
                 # input file name
@@ -89,7 +91,7 @@ def parsefile(filename: str, moves: dict) -> int:
                 # parse move
                 elif args[0] == '-m':
                     move_info = parsemove(line)
-
+                    move_info.setfile(movie_file)
                     # add to dictionary
                     key = str.lower(move_info.name)
                     if key not in moves.keys():     # new entry
